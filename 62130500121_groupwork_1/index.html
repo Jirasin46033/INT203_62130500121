@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Basic Vue Js - HelloWorld App</title>
+
+  <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+  <!-- Using via Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- https://tailwindcss.com/docs/installation -->
+  <!-- Using Tailwind via CDN -->
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+  <!-- Vue CDN -->
+
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+  <!-- <div class="flex flex-nowrap font-serif relative h-16 w-full m-auto box-border absolute">
+    <h1 class="flex items-center text-lg font-bold pl-10 ">SMTOWN</h1>
+    <ul class="flex flex-nowrap space-x-10 items-center text-base font-medium pl-32 ">
+      <li>Musicians</li>
+      <li>Actors</li>
+      <li>Entertainers</li>
+      <li>Models</li>
+      <li>Athletes</li>
+    </ul>
+  </div> -->
+
+
+  <div id="header" class="absolute left-0 top-0 right-0" style="min-width: 700px; z-index: 200;">
+    <div class="relative m-auto w-full box-border" style="height: 70px;">
+      <div class="m-0 w-full" style="max-width: 1400px;">
+        <h1 class="absolute left-6 top-5 z-20">SMTOWN</h1>
+        <ul class="flex flex-nowrap space-x-10 float-left ml-56" style="padding-top: 21px;">
+          <li>Musicians</li>
+          <li>Actors</li>
+          <li>Entertainers</li>
+          <li>Models</li>
+          <li>Athletes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="content" class="relative overflow-hidden">
+    
+    <div class="relative overflow-hidden z-10 bg-center" 
+      style="height: 380px; background-image:url(https://smcdn.smtown.com/file/fix/star_5aabdc4faf01e.jpg)">
+    </div>
+    <div id="sub_main" class="relative z-40" style="padding: 150px 0 120px 0; margin-top: -250px;">
+      <div id="contains" class="relative m-auto" style="padding: 0 30px; width: 1080px;">
+        <div class="relative mb-20" style="right: 55px;">
+          <h2 class="font-bold text-6xl" ><br>Musicians</h2>
+        </div>
+
+        <div class="flex">
+          <div id="list_bar_1" class="w-1/2 "style="height: 50px; border-bottom: 3px solid #000000;">
+            <h2 class="block leading-10 text-xl font-bold" >News</h2>
+          </div>
+          <div id="list_bar_2" class="w-1/2 ml-5"style="height: 50px; border-bottom: 3px solid #EC4899;">
+            <h2 class="block leading-10 text-xl font-bold text-pink-500" >Musicians</h2>
+          </div>
+        </div>
+
+        <div class="flex space-x-5 mt-10" style="height: 50px;">
+          <a href="" class="leading-8 text-base font-bold">Group</a>
+          <a href="" class="leading-8 text-base font-bold">Solo</a>
+          <a href="" class="leading-8 text-base font-bold text-pink-500">All</a>
+        </div>
+
+        <ul id="list_musicians" class="grid grid-rows-4 grid-cols-4 gap-5">
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/202011/star_5f9fd11b144ed.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">aespa</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/201910/star_5d9ee04000620.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">규현</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/202101/star_6004e2504dcfb.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">유노윤호</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/202012/star_5fe01539b9e79.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">BAEKHYUN</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/202010/star_5f87acb70359a.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">NCT</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/201910/star_5d9c5fa2826bb.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">SUPER JUNIOR</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/202009/star_5f719bd3334a4.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">SuperM</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/202006/star_5edf1c586ecf6.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">WayV</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/202005/star_5ec3a3e37f046.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">NCT 127</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/202004/star_5ea9383f3c8a8.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">NCT DREAM</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/201912/star_5e008453e579c.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">Red Velvet</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/201911/star_5dde384fe3666.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">EXO</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/201812/star_5c232847ed169.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">TVXQ!</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/201812/star_5c0a1bf019137.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">TRAX</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/201712/star_5a389311451a3.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">SHINee</span>
+          </li>
+          <li>
+            <span class="block w-60 h-60 bg-contain" style=" background-image:url(https://smcdn.smtown.com/file/star/201712/star_5a38920e60331.jpg); "></span>
+            <span class="mt-1.5 h-5 leading-5 text-sm">GIRLS' GENERATION</span>
+          </li>
+          
+        </ul>
+
+        <div class="mt-12 text-center">
+          <a href="" class="px-28 py-4" style="border: 1px solid black;">More</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  
+  
+
+
+
+  
+  
+  <!-- my main.js -->
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
