@@ -5,7 +5,8 @@ const app ={
             text1: 'Hello guys, Nice to meet you!!',
             photos: 9,
             friends: 407,
-            imgupper: 'https://wallpaperaccess.com/full/1931304.jpg'
+            imgupper: 'https://wallpaperaccess.com/full/1931304.jpg',
+            imgprofile: 'images/me.jpg'
         }
     }
 }
